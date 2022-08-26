@@ -26,6 +26,8 @@ func _unhandled_input(event):
 				find_path(global_position + Vector2.DOWN * _tile_size)
 			elif event.is_action("ui_up"):
 				find_path(global_position + Vector2.UP * _tile_size)
+			elif event.is_action("ui_cancel"):
+				pass
 	elif event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.is_pressed():
 			var pos = get_global_mouse_position()
